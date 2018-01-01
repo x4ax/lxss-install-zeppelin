@@ -11,29 +11,29 @@ After installation is complete, Zeppelin 0.7.3 is launched on port 8891, zeppeli
 /usr/local/zeppelin/bin/zeppelin-daemon.sh stop
 ``` 
 
-## Zeppelin 0.7.3 on WSL step by step:
+# Zeppelin 0.7.3 on WSL step by step:
 
-###1 Check/install git 
+## 1 Check/install git 
 ```bash
 $ sudo apt-get update
 $ sudo apt-get -y -qq install git
 $ git --version
 ```
 
-###2 Checkout /x4ax/lxss-install-zeppelin repo from GitHub
+## 2 Checkout /x4ax/lxss-install-zeppelin repo from GitHub
 ```bash
 $ mkdir ~/x4ax
 $ cd ~/x4ax
 $ git clone https://github.com/x4ax/lxss-install-zeppelin.git
 $ cd lxss-install-zeppelin
 ```
-###3 Install Java 8
+## 3 Install Java 8
 ```bash
 ~/x4ax/lxss-install-zeppelin $ ./install-java.sh
 ```
 - Installs OpenJDK 8 using apt-get.
 
-###3 Install Hadoop 2.9.0 and Spark 2.2.0 - Hadoop 2.7 
+## 4 Install Hadoop 2.9.0 and Spark 2.2.0 - Hadoop 2.7 
 ```bash
 ~/x4ax/lxss-install-zeppelin $ ./install-spark-hadoop.sh
 ```
@@ -50,7 +50,7 @@ $ cd lxss-install-zeppelin
 export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
 ```
 
-###4 Test hadoop (using mapreduce "grep" example) 
+## 5 Test hadoop (using mapreduce "grep" example) 
 https://github.com/apache/hadoop/blob/trunk/hadoop-mapreduce-project/hadoop-mapreduce-examples/src/main/java/org/apache/hadoop/examples/Grep.java
 ```bash
 ~/x4ax/lxss-install-zeppelin $ ./test-hadoop.sh
@@ -59,14 +59,14 @@ https://github.com/apache/hadoop/blob/trunk/hadoop-mapreduce-project/hadoop-mapr
 - Runs the mapreduce "grep" example
 - Stores results in ```testhadoop/${timenow}/grep_example``` folder, expecting any ```grep_example/part*```  as __Success__
 
-###5 Test spark (using SparkPi example) 
+## 6 Test spark (using SparkPi example) 
 https://github.com/apache/spark/blob/branch-2.2/examples/src/main/scala/org/apache/spark/examples/SparkPi.scala
 ```bash
 ~/x4ax/lxss-install-zeppelin $ ./test-spark.sh
 ```
 - Runs the SparkPI example, expecting "Pi is roughly ... " in output as __Success__ 
 
-###4 Install Zeppelin 0.7.3 and launch it on port 8891
+## 7 Install Zeppelin 0.7.3 and launch it on port 8891
 ```bash
 ~/x4ax/lxss-install-zeppelin $ ./install-zeppelin.sh
 ```
@@ -86,12 +86,12 @@ zeppelin.server.port=8891
 ```
 - Launches Zeppelin
 
-## Addendum. WSL
+# Addendum. WSL
 
-### How to install the Windows Subsystem for Linux
+## How to install the Windows Subsystem for Linux
 https://docs.microsoft.com/en-us/windows/wsl/install-win10
  
-### Full lxss (legacy WSL) reinstall
+## Full lxss (legacy WSL) reinstall
 In the explanation below we will use:
 
 ```lnx-user-name``` - to refer to a regular lxss user (other than root)
@@ -105,7 +105,7 @@ In Windows cmd with elevated permissions
 ... enter password
 ```
 
-#### How to reset lxss (legacy WSL) user password
+## How to reset lxss (legacy WSL) user password
 
 In Windows cmd with elevated permissions, set default lxss user to root: 
 ```bash
