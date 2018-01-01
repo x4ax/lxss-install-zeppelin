@@ -71,7 +71,7 @@ https://github.com/apache/spark/blob/branch-2.2/examples/src/main/scala/org/apac
 ~/x4ax/lxss-install-zeppelin $ ./install-zeppelin.sh
 ```
 
-- Downloads the zeppelin bin package
+- Downloads the zeppelin bin package from http://www.apache.org/dyn/closer.cgi/zeppelin/zeppelin-0.7.3/zeppelin-0.7.3-bin-all.tgz
 - Unpacks the downloaded zeppelin package
 - Moves the extracted zeppelin folder to ```/usr/local```
 - Creates the symlink ```/usr/local/zeppelin-0.7.3 -> /usr/local/zeppelin```
